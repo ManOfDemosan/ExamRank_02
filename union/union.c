@@ -1,17 +1,17 @@
 #include <unistd.h>
 
-int main(int ac, char **av)
+int main (int ac, char **av)
 {
-	int used[225] = {0};
+	int used[255] = {0};
 	int i, j;
 
-	if(ac ==3)
+	if(ac == 3)
 	{
 		i = 1;
-		while(i < 3)
+		while (i < 3)
 		{
 			j = 0;
-			while (av[i][j])
+			while (av[i][j] != 0)
 			{
 				if(used[av[i][j]] == 0)
 				{
@@ -24,4 +24,5 @@ int main(int ac, char **av)
 		}
 	}
 	write(1, "\n", 1);
+	return 0;
 }
