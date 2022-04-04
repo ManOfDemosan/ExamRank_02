@@ -5,12 +5,13 @@ char *ft_strdup(char *str)
 	char *res;
 	int i = 0;
 	int len = 0;
-	while(str[len])
+
+	while (str[len])
 		len++;
-	res =malloc(sizeof(char) * (len + 1));
-	if(res == 0)
+	res = malloc(sizeof(char) * (len + 1));
+	if (res == 0)
 		return 0;
-	while(i < len)
+	while (i < len)
 	{
 		res[i] = str[i];
 		i++;
@@ -21,21 +22,21 @@ char *ft_strdup(char *str)
 
 char *get_next_line(int fd)
 {
-	char array[9999999] = {0};
+	char arr[9999999] = {0};
 	char buff;
 	int i = 0;
 	int nbyte = 0;
-	
+
 	if(fd < 0 || BUFFER_SIZE <= 0)
 		return 0;
-	while ((nbyte = read (fd, &buff, 1)) && nbyte > 0)
+	while((nbyte = read(fd, &buff, 1)) && nbyte > 0)
 	{
-		array[i++] = buff;
+		arr[i++] = buff;
 		if(buff == '\n')
 			break;
 	}
-	array[i] = 0;
+	arr[i] = 0;
 	if(nbyte <= 0 && i == 0)
 		return 0;
-	return (ft_strdup(array));
+	return (ft_strdup(arr));
 }
