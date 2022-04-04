@@ -1,0 +1,55 @@
+[34m[Mandatory]
+[37m[BUFFER_SIZE = 1]: [0m
+[37mInvalid fd: [32m1.OK [32m2.OK [32m3.OK [0m
+[37mfiles/empty: [32m1.OK [32m2.OK [0m
+[37mfiles/nl: [32m1.OK [32m2.OK [0m
+[37mfiles/41_no_nl: [32m1.OK [32m2.OK [0m
+[37mfiles/41_with_nl: [32m1.OK [32m2.OK [32m3.OK [0m
+[37mfiles/42_no_nl: [32m1.OK [32m2.OK [0m
+[37mfiles/42_with_nl: [32m1.OK [32m2.OK [32m3.OK [0m
+[37mfiles/43_no_nl: [32m1.OK [32m2.OK [0m
+[37mfiles/43_with_nl: [32m1.OK [32m2.OK [32m3.OK [0m
+[37mfiles/multiple_nlx5: [32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [0m
+[37mfiles/multiple_line_no_nl: [32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [0m
+[37mfiles/multiple_line_with_nl: [32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [0m
+[37mfiles/alternate_line_nl_no_nl: [32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [32m7.OK [32m8.OK [32m9.OK [32m10.OK [0m
+[37mfiles/alternate_line_nl_with_nl: [32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [32m7.OK [32m8.OK [32m9.OK [32m10.OK [0m
+[37mfiles/big_line_no_nl: [32m1.OK [32m2.OK [0m
+[37mfiles/big_line_with_nl: [32m1.OK [32m2.OK [0m
+[37mstdin: [32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [32m7.OK [32m8.OK [32m9.OK [32m10.OK 
+[37m[BUFFER_SIZE = 42]: [0m
+[37mInvalid fd: [32m1.OK [32m2.OK [32m3.OK [0m
+[37mfiles/empty: [32m1.OK [32m2.OK [0m
+[37mfiles/nl: [32m1.OK [32m2.OK [0m
+[37mfiles/41_no_nl: [32m1.OK [32m2.OK [0m
+[37mfiles/41_with_nl: [32m1.OK [32m2.OK [32m3.OK [0m
+[37mfiles/42_no_nl: [32m1.OK [32m2.OK [0m
+[37mfiles/42_with_nl: [32m1.OK [32m2.OK [32m3.OK [0m
+[37mfiles/43_no_nl: [32m1.OK [32m2.OK [0m
+[37mfiles/43_with_nl: [32m1.OK [32m2.OK [32m3.OK [0m
+[37mfiles/multiple_nlx5: [32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [0m
+[37mfiles/multiple_line_no_nl: [32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [0m
+[37mfiles/multiple_line_with_nl: [32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [0m
+[37mfiles/alternate_line_nl_no_nl: [32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [32m7.OK [32m8.OK [32m9.OK [32m10.OK [0m
+[37mfiles/alternate_line_nl_with_nl: [32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [32m7.OK [32m8.OK [32m9.OK [32m10.OK [0m
+[37mfiles/big_line_no_nl: [32m1.OK [32m2.OK [0m
+[37mfiles/big_line_with_nl: [32m1.OK [32m2.OK [0m
+[37mstdin: [32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [32m7.OK [32m8.OK [32m9.OK [32m10.OK 
+[37m[BUFFER_SIZE = 10000000]: [0m
+[37mInvalid fd: [32m1.OK [32m2.OK [32m3.OK [0m
+[37mfiles/empty: [32m1.OK [32m2.OK [0m
+[37mfiles/nl: [32m1.OK [32m2.OK [0m
+[37mfiles/41_no_nl: [32m1.OK [32m2.OK [0m
+[37mfiles/41_with_nl: [32m1.OK [32m2.OK [32m3.OK [0m
+[37mfiles/42_no_nl: [32m1.OK [32m2.OK [0m
+[37mfiles/42_with_nl: [32m1.OK [32m2.OK [32m3.OK [0m
+[37mfiles/43_no_nl: [32m1.OK [32m2.OK [0m
+[37mfiles/43_with_nl: [32m1.OK [32m2.OK [32m3.OK [0m
+[37mfiles/multiple_nlx5: [32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [0m
+[37mfiles/multiple_line_no_nl: [32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [0m
+[37mfiles/multiple_line_with_nl: [32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [0m
+[37mfiles/alternate_line_nl_no_nl: [32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [32m7.OK [32m8.OK [32m9.OK [32m10.OK [0m
+[37mfiles/alternate_line_nl_with_nl: [32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [32m7.OK [32m8.OK [32m9.OK [32m10.OK [0m
+[37mfiles/big_line_no_nl: [32m1.OK [32m2.OK [0m
+[37mfiles/big_line_with_nl: [32m1.OK [32m2.OK [0m
+[37mstdin: [32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [32m7.OK [32m8.OK [32m9.OK [32m10.OK 
