@@ -2,9 +2,9 @@
 #include <stdarg.h>
 #define hex "0123456789abcdef"
 
-int putchar(char c)
+int	putchar(char c)
 {
-	return (write(1, &c, 1));
+	return(write(1, &c, 1));
 }
 
 int putstr(char *str)
@@ -18,13 +18,13 @@ int putstr(char *str)
 	return res;
 }
 
-int putnbr(long long n, int base)
+int putnbr(long long n, int base) 
 {
 	int res = 0;
 
 	if(n < 0)
 	{
-		res += write(1, "-", 1);
+		res += write(1, "-",1);
 		n *= -1;
 	}
 	if(n >= base)
@@ -38,7 +38,7 @@ int print(va_list ap, const char *str)
 	int res = 0;
 	char c;
 
-	while(*str)
+	while (*str)
 	{
 		c = *str++;
 		if(c != '%')
@@ -59,11 +59,11 @@ int print(va_list ap, const char *str)
 
 int ft_printf(const char *str, ...)
 {
-	int res = 0;
 	va_list ap;
+	int res = 0;
 
 	va_start(ap, str);
 	res += print(ap, str);
 	va_end(ap);
-	return res;
+	return(res);
 }

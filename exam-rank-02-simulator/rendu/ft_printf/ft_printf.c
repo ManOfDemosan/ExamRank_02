@@ -2,69 +2,68 @@
 #include <stdarg.h>
 #define hex "0123456789abcdef"
 
-static int	ft_putchar(char c)
+int putchar(char c)
 {
 	return (write(1, &c, 1));
 }
 
-static int	ft_putstr(char *s)
+int putstr(char *str)
 {
-	int	ret = 0;
-	if (!s)
-		return (write(1, "(null)", 6));
-	while (*s)
-		ret += ft_putchar(*s++);
-	return (ret);
+	int res = 0;
+
+	if(!str)
+		return(write(1, "(null)", 6));
+	while(*str)
+		res += putchar(*str++);
+	return res;
 }
 
-static int ft_putnbr(long long n, int base)
+int putnbr(long long n, int base)
 {
-    int ret = 0;
+	int res = 0;
 
-    if (n < 0)
-    {
-        ret += write(1, "-", 1);
-        n *= -1;
-    }
-    if (n >= base)
-        ret += ft_putnbr(n/base, base);
-    ret += ft_putchar(hex[n%base]);
-    return ret;
-}
-
-static int	print(const char *f, va_list ap)
-{
-	int ret = 0;
-	char c;
-	
-	while (*f)
+	if(n < 0)
 	{
-		c = *f++;
-		if (c != '%')
-		{
-			ret += ft_putchar(c);
-		}
+		res += write(1, "-", 1);
+		n *= -1;
+	}
+	if(n >= base)
+		res += putnbr(n/base, base);
+	res += putchar(hex[n%base]);
+	return res;
+}
+
+int print(va_list ap, const char *str)
+{
+	int res = 0;
+	char c;
+
+	while(*str)
+	{
+		c = *str++;
+		if(c != '%')
+			res += putchar(c);
 		else
 		{
-			c = *f++;
-			if (c == 's')
-				ret += ft_putstr(va_arg(ap, char *));
-			else if (c == 'd')
-				ret += ft_putnbr((long long)va_arg(ap, int), 10);
-			else if (c == 'x')
-				ret += ft_putnbr((long long)va_arg(ap, unsigned int), 16);
+			c = *str++;
+			if(c == 's')
+				res += putstr(va_arg(ap, char *));
+			else if(c == 'd')
+				res += putnbr((long long) va_arg(ap, int), 10);
+			else if(c == 'x')
+				res += putnbr((long long) va_arg(ap, unsigned int), 16);
 		}
 	}
-	return (ret);
+	return res;
 }
 
-int	ft_printf(const char *f, ...)
+int ft_printf(const char *str, ...)
 {
+	int res = 0;
 	va_list ap;
-	int	ret = 0;
 
-	va_start(ap, f);
-	ret += print(f, ap);
+	va_start(ap, str);
+	res += print(ap, str);
 	va_end(ap);
-	return (ret);
+	return res;
 }
