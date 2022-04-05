@@ -1,15 +1,15 @@
 #include "get_next_line.h"
 
-char *ft_strdup(char *str)
+char	*ft_strdup(char *str)
 {
 	char *res;
 	int i = 0;
 	int len = 0;
 
-	while (str[len])
-		len++;
+	while(str[len])
+		len ++;
 	res = malloc(sizeof(char) * (len + 1));
-	if (res == 0)
+	if(res == 0)
 		return 0;
 	while (i < len)
 	{
@@ -20,7 +20,7 @@ char *ft_strdup(char *str)
 	return (res);
 }
 
-char *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
 	char arr[9999999] = {0};
 	char buff;
@@ -29,7 +29,7 @@ char *get_next_line(int fd)
 
 	if(fd < 0 || BUFFER_SIZE <= 0)
 		return 0;
-	while((nbyte = read(fd, &buff, 1)) && nbyte > 0)
+	while ((nbyte = read(fd, &buff, 1)) && nbyte > 0)
 	{
 		arr[i++] = buff;
 		if(buff == '\n')
@@ -38,5 +38,5 @@ char *get_next_line(int fd)
 	arr[i] = 0;
 	if(nbyte <= 0 && i == 0)
 		return 0;
-	return (ft_strdup(arr));
+	return(ft_strdup(arr));
 }

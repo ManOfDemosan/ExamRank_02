@@ -47,9 +47,7 @@ static int	print(const char *f, va_list ap)
 		else
 		{
 			c = *f++;
-			if (c == 'c')
-				ret += ft_putchar((char)va_arg(ap, int));
-			else if (c == 's')
+			if (c == 's')
 				ret += ft_putstr(va_arg(ap, char *));
 			else if (c == 'd')
 				ret += ft_putnbr((long long)va_arg(ap, int), 10);
