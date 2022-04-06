@@ -1,9 +1,9 @@
 #include <unistd.h>
 
-int	check(char *str, char c, int index)
+int check(char *str, char c, int index)
 {
-	int	i = 0;
-
+	int i = 0;
+	
 	while(i < index)
 	{
 		if(str[i] == c)
@@ -13,7 +13,7 @@ int	check(char *str, char c, int index)
 	return 0;
 }
 
-int main (int ac, char **av)
+int main(int ac, char **av)
 {
 	int i, j;
 
@@ -27,7 +27,7 @@ int main (int ac, char **av)
 				j = 0;
 				while(av[2][j])
 				{
-					if(av[2][j] == av[1][i])
+					if(av[1][i] == av[2][j])
 					{
 						write(1, &av[1][i], 1);
 						break;
@@ -38,6 +38,6 @@ int main (int ac, char **av)
 			i++;
 		}
 	}
-	write(1, "\n", 1);
+	write(1, "\n" ,1);
 	return 0;
 }

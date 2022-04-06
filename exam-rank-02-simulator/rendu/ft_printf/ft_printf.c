@@ -2,17 +2,17 @@
 #include <stdarg.h>
 #define hex "0123456789abcdef"
 
-int putchar(char c)
+int	putchar(char c)
 {
 	return (write(1, &c, 1));
 }
 
-int putstr(char *str)
+int	putstr(char *str)
 {
 	int res = 0;
-
+	
 	if(!str)
-		return(write(1, "(null)", 6));
+		return (write(1, "(null)", 6));
 	while(*str)
 		res += putchar(*str++);
 	return res;
@@ -47,7 +47,7 @@ int print(va_list ap, const char *str)
 		{
 			c = *str++;
 			if(c == 's')
-				res += putstr(va_arg(ap, char *));
+				res += putstr(va_arg(ap, char*));
 			else if(c == 'd')
 				res += putnbr((long long) va_arg(ap, int), 10);
 			else if(c == 'x')
@@ -57,10 +57,10 @@ int print(va_list ap, const char *str)
 	return res;
 }
 
-int ft_printf(const char *str, ...)
+int	ft_printf(const char *str, ...)
 {
-	int res = 0;
 	va_list ap;
+	int res = 0;
 
 	va_start(ap, str);
 	res += print(ap, str);

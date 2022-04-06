@@ -22,7 +22,7 @@ char *ft_strdup(char *str)
 
 char *get_next_line(int fd)
 {
-	char arr[9999999] = {0};
+	char arr[99999] = {0};
 	char buff;
 	int i = 0;
 	int nbyte = 0;
